@@ -7,6 +7,7 @@ import java.util.*
 class WeatherAPIMock: WeatherAPI {
     override fun getWeather(city: City, result: (weather: WeatherData) -> Unit, error: (String) -> Unit) {
         val weather = WeatherData(
+            temperature = 12.22,
             condition = "Overcast",
             humidity = 59.1,
             windSpeed = 19.2,

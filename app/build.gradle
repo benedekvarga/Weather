@@ -20,6 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -38,13 +41,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
     implementation 'androidx.core:core-ktx:1.0.1'
     implementation "org.jetbrains.anko:anko:0.10.8"
+    implementation "androidx.recyclerview:recyclerview:1.0.0-beta01"
 
     /*Architecture*/
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
-
-    /*Navigation*/
-    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
-    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
 
     /*Rx*/
     implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
