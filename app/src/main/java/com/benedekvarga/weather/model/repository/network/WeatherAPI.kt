@@ -4,5 +4,5 @@ import com.benedekvarga.weather.model.model.City
 import com.benedekvarga.weather.model.model.WeatherData
 
 interface WeatherAPI {
-    fun getWeather(result: (city: City) -> WeatherData, error: (String) -> Unit)
+    fun getWeather(city: City, result: (weather: WeatherData) -> Unit, error: (String) -> Unit)
 }
