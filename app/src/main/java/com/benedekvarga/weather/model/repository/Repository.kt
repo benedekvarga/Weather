@@ -19,9 +19,12 @@ class Repository(val dataBase: DataBase, val weatherApi: WeatherAPI) {
             }
     }
 
-    fun getWeatherData(result: (city: City) -> WeatherData, error: (String) -> Unit = {})  {
-        weatherApi.getWeather { weather ->
+    fun getWeatherData(result: (city: City) -> WeatherData, error: (String) -> Unit = {}) {
+        weatherApi.getWeather( { weather ->
             result.invoke(weather)
-        }
+        }, { message ->
+            error.invoke(message)
+        })
+
     }
 }
