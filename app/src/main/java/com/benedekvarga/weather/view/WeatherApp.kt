@@ -8,6 +8,7 @@ import com.benedekvarga.weather.model.repository.database.DataBaseMock
 import com.benedekvarga.weather.model.repository.network.WeatherAPI
 import com.benedekvarga.weather.model.repository.network.WeatherAPIMock
 import com.benedekvarga.weather.viewmodel.DashboardViewModel
+import com.benedekvarga.weather.viewmodel.DetailsViewModel
 import org.koin.android.ext.android.startKoin
 import org.koin.android.viewmodel.experimental.builder.viewModel
 import org.koin.dsl.module.module
@@ -19,6 +20,7 @@ class WeatherApp: MultiDexApplication() {
         factory<WeatherAPI> { WeatherAPIMock() }
         single<Repository> { RepositoryImp(get(), get()) }
         viewModel<DashboardViewModel>()
+        viewModel<DetailsViewModel>()
     }
 
     // First entry point
