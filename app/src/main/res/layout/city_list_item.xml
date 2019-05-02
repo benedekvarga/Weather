@@ -6,8 +6,11 @@
         <variable name="temperatureValue" type="String" />
     </data>
     <RelativeLayout
+            android:id="@+id/rl_container"
             android:layout_width="match_parent"
-            android:layout_height="32dp">
+            android:layout_height="32dp"
+            android:clickable="true"
+            android:focusable="true">
 
         <TextView
                 android:id="@+id/tv_city_name"
