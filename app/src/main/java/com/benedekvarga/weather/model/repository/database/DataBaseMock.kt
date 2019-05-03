@@ -3,6 +3,14 @@ package com.benedekvarga.weather.model.repository.database
 import com.benedekvarga.weather.model.model.City
 
 class DataBaseMock: DataBase {
+    override fun getCity(cityId: String): City = City(id = "123r", name = "Budapest", isFavourite = true)
+
+    override fun insertFavourite(city: City) {
+    }
+
+    override fun removeFavourite(city: City) {
+    }
+
     override fun getFavourites(result: (cities: List<City>) -> Unit) {
         result.invoke(arrayListOf(
             City(id = "123r", name = "Budapest", isFavourite = true),
