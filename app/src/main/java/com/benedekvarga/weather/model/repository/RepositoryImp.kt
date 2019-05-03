@@ -20,4 +20,14 @@ class RepositoryImp(val dataBase: DataBase, val weatherApi: WeatherAPI): Reposit
             error.invoke(message)
         })
     }
+
+    override fun getCityById(cityId: String, result: (City) -> Unit, error: (String) -> Unit) {
+    }
+
+    override fun getCityBySearchQuery(queryString: String, result: (City) -> Unit, error: (String) -> Unit) {
+    }
+
+    override fun saveCityAsFavourite(city: City) {
+    }
+
 }

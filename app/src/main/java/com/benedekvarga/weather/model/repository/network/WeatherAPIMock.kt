@@ -5,6 +5,9 @@ import com.benedekvarga.weather.model.model.WeatherData
 import java.util.*
 
 class WeatherAPIMock: WeatherAPI {
+    override fun searchWeatherQuery(query: String, result: (city: City) -> Unit, error: (String) -> Unit) {
+    }
+
     override fun getWeather(city: City, result: (weather: WeatherData) -> Unit, error: (String) -> Unit) {
         val weather = WeatherData(
             temperature = 12.22,
